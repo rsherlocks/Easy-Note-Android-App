@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F2F2F2"
+    android:padding="20dp"
+    tools:context=".UIFragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/personalInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:text="Welcome John Doe!"
+                android:textSize="24sp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/rakib"
+                android:layout_alignParentRight="true"
+                android:layout_width="44dp"
+                android:layout_height="44dp"/>
+
+
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            
+            android:id="@+id/searchCard"
+            android:layout_width="324dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="35dp"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@+id/personalInformation"
+            android:layout_marginTop="23dp"
+            android:padding="5dp"
+            android:background="#fff">
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                app:queryHint="search"
+                app:iconifiedByDefault="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layoutDirection="rtl"
+                />
+
+
+        </com.google.android.material.card.MaterialCardView>
+        
+        <RelativeLayout
+            android:id="@+id/cardRelativeLayout"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/searchCard"
+            android:padding="5dp"
+            android:layout_centerHorizontal="true"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+          <LinearLayout
+              android:layout_width="324dp"
+              android:layout_centerHorizontal="true"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.card.MaterialCardView
+
+                  android:id="@+id/cardNotes"
+                  app:cardCornerRadius="5dp"
+                  app:cardBackgroundColor="#CC0C52"
+                  android:layout_width="83dp"
+
+                  android:layout_height="62dp">
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+
+                              <ImageView
+
+                                  android:layout_alignParentLeft="true"
+                                  android:src="@drawable/ic_baseline_assignment_white_24"
+                                  android:layout_width="24dp"
+                                  android:layout_height="24dp"
+                                  android:contentDescription="TODO" />
+                              <TextView
+                                  android:id="@+id/notesNumber"
+                                  android:layout_alignParentRight="true"
+
+                                  android:text="30"
+                                  android:textSize="19sp"
+                                  android:textStyle="bold"
+                                  android:textColor="#FBFBFB"
+                                  android:textDirection="rtl"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"/>
+                          </RelativeLayout>
+
+
+                      <TextView
+                          android:layout_marginTop="5dp"
+                          android:text="Notes"
+                          android:textColor="#FBFBFB"
+                          android:textStyle="bold"
+                          android:textSize="12sp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"/>
+
+                  </LinearLayout>
+              </com.google.android.material.card.MaterialCardView>
+              <com.google.android.material.card.MaterialCardView
+
+                  android:id="@+id/cardReminder"
+                  android:layout_toRightOf="@id/cardNotes"
+                  android:layout_marginLeft="10dp"
+                  app:cardCornerRadius="5dp"
+                  app:cardBackgroundColor="#F52439"
+                  android:layout_width="83dp"
+
+                  android:layout_height="62dp">
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="85dp">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                              <ImageView
+                                  android:id="@+id/imageReminder"
+
+                                  android:layout_alignParentLeft="true"
+                                  android:src="@drawable/ic_baseline_menu_24"
+                                  android:layout_width="24dp"
+                                  android:layout_height="24dp"/>
+                              <TextView
+
+                                  android:layout_alignParentRight="true"
+
+                                  android:text="13"
+
+                                  android:textSize="19sp"
+                                  android:textStyle="bold"
+                                  android:textColor="#FBFBFB"
+                                  android:textDirection="rtl"
+
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"/>
+                          </RelativeLayout>
+
+
+                      <TextView
+
+                          android:layout_marginTop="5dp"
+                          android:text="Reminders"
+                          android:layout_gravity="left"
+                          android:gravity="left"
+                          android:textColor="#FBFBFB"
+                          android:textStyle="bold"
+                          android:textSize="12sp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"/>
+
+                  </LinearLayout>
+              </com.google.android.material.card.MaterialCardView>
+              <com.google.android.material.card.MaterialCardView
+
+                  android:id="@+id/cardSchedule"
+                  android:layout_toRightOf="@id/cardReminder"
+                  android:layout_marginLeft="10dp"
+                  app:cardCornerRadius="5dp"
+                  app:cardBackgroundColor="#6F4FF1"
+                  android:layout_width="133dp"
+
+                  android:layout_height="62dp">
+                  <LinearLayout
+                      android:padding="10dp"
+                      android:orientation="vertical"
+                      android:layout_width="125dp"
+                      android:layout_height="85dp">
+
+                          <RelativeLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                              <ImageView
+                                  android:id="@+id/imageIdSchedule"
+                                  android:layout_gravity="left"
+                                  android:src="@drawable/ic_baseline_calendar_today_white_24"
+                                  android:layout_width="24dp"
+                                  android:layout_height="24dp"/>
+                              <TextView
+
+                                  android:layout_toRightOf="@id/imageIdSchedule"
+                                  android:layout_alignParentRight="true"
+
+                                  android:layout_gravity="right"
+                                  android:gravity="right"
+
+                                  android:text="0"
+                                  android:textSize="19sp"
+                                  android:textStyle="bold"
+                                  android:textColor="#FBFBFB"
+                                  android:textDirection="rtl"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"/>
+                          </RelativeLayout>
+
+
+                      <TextView
+
+
+                          android:layout_marginTop="5dp"
+                          android:text="Schedule"
+                          android:textColor="#FBFBFB"
+                          android:textStyle="bold"
+                          android:textSize="12sp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"/>
+
+                  </LinearLayout>
+              </com.google.android.material.card.MaterialCardView>
+          </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+
+         android:layout_below="@id/cardRelativeLayout"
+            android:layout_marginTop="25dp"
+            app:cardBackgroundColor="#fff"
+            android:layout_width="324dp"
+            android:padding="5dp"
+            app:cardElevation="5dp"
+            android:elevation="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="324dp">
+
+                <CalendarView
+                    android:id="@+id/calenderView"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbarFadeDuration="2"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:showWeekNumber="true"
+                    android:shownWeekCount="5"
+                    android:scrollbars="none"
+                    android:layout_width="320dp"
+                    android:layout_height="320dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</FrameLayout>

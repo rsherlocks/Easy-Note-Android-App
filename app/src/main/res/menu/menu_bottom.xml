@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/calendarId"
+
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title=""
+        />
+    <item
+        android:id="@+id/assignmentId"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        android:title=""/>
+
+    <item
+        android:id="@+id/homeId"
+
+
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        />
+
+    <item
+        android:id="@+id/heartId"
+        android:icon="@drawable/ic_heart"
+        android:title=""
+        />
+    <item
+        android:id="@+id/settingId"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title=""
+        />
+</menu>

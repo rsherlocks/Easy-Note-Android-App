@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetAddNote"
+    android:padding="20dp"
+    android:layout_gravity="bottom"
+    android:fitsSystemWindows="false"
+    android:background="@drawable/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="50dp"
+    app:layout_behavior="@string/fab_transformation_sheet_behavior"
+    android:layout_height="wrap_content">
+
+    <EditText
+
+        android:id="@+id/editTextTitle"
+        android:textSize="24dp"
+        android:hint="Note Title"
+        android:gravity="top"
+        android:background="@drawable/round_edittext"
+        android:focusableInTouchMode="true"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+    <EditText
+        android:layout_marginTop="25dp"
+        android:id="@+id/editTextDescription"
+        android:textSize="19dp"
+        android:textAlignment="gravity"
+        android:gravity="top"
+        android:background="@drawable/round_edittext"
+        android:focusableInTouchMode="true"
+        android:hint="Note Description"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionNext"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="10dp"
+            android:layout_weight="3"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:text="Make a favorite note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Switch
+            android:id="@+id/switchFavorite"
+            android:textOff="yes"
+            android:textOn="no"
+            android:layout_weight="1.5"
+            android:layout_width="65dp"
+            android:background="@drawable/round_button"
+            android:layout_height="wrap_content"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/addNoteButton"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content"
+        android:text="Add Note"
+        app:icon="@drawable/ic_baseline_add_24"
+
+        />
+
+
+</LinearLayout>
